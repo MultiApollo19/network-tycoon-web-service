@@ -15,7 +15,7 @@ export default function Home() {
 
       {res.map((size) =>(
         
-        <><p className='text-black text-xl'>{size}</p><Image key={size} src='/Images/Screens/15072022.png' width={size * 2} height={size} alt={"Screen"} /></>
+        <><p className='text-black text-xl'>{size}</p><Image key={size} src='/static/img/screens/15072022.png' width={size * 2} height={size} alt={"Screen"} /></>
     ))}
     </div>
   )
