@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Tornado - Network Tycoon managment panel</title>
         <meta name="description" content="Managment app" />
-        <link rel="icon" href="/logo.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
     </div>
   )

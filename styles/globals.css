@@ -20,9 +20,6 @@
     text-xs font-arcade outline-black outline-2
     transition-all duration-100 scale-0 origin-left;
   }
-  .not-found{
-    @apply relative bg-blue-800 font-arcade font-normal w-screen h-screen flex flex-col items-center justify-center shadow-md
-  }
   .not-found p{
     @apply text-white mx-auto
   }
