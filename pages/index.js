@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Image src='/Images/Screens/15072022.png' width={256} height={128}/>
+      <Image src='/Images/Screens/15072022.png' width={256} height={128} alt={"Screen"}/>
     </div>
   )
 }
