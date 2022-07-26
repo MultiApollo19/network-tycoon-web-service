@@ -21,9 +21,15 @@
     transition-all duration-100 scale-0 origin-left;
   }
   .not-found{
-    @apply flex bg-blue-800 font-arcade font-normal
+    @apply relative bg-blue-800 font-arcade font-normal w-screen h-screen flex flex-col items-center justify-center shadow-md
   }
-  .not-found:h1{
-    @apply text-white
+  .not-found p{
+    @apply text-white mx-auto
+  }
+  .not-found h1{
+    @apply text-black mx-auto text-3xl mb-10 bg-white p-5
+  }
+  .not-found a{
+    @apply bg-white text-black p-2 mt-5 hover:bg-black hover:text-white
   }
 }
