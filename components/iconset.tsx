@@ -10,12 +10,10 @@ const Logo = (width='32',height='32',fill='#ffffff') => (
       <g
         style={{
           display: "inline",
-          fill: {fill},
         }}
       >
         <path
           style={{
-            fill: {fill},
             stroke: "#000",
             strokeWidth: ".264583px",
             strokeLinecap: "butt",
