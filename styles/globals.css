@@ -29,4 +29,7 @@
   .not-found a{
     @apply bg-white text-black p-2 mt-5 hover:bg-black hover:text-white
   }
+  .footer p{
+    @apply relative flex items-center justify-center text-white
+  }
 }
