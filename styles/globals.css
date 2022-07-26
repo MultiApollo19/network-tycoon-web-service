@@ -30,6 +30,15 @@
     @apply bg-white text-black p-2 mt-5 hover:bg-black hover:text-white
   }
   .footer p{
-    @apply relative flex items-center justify-center text-white
+    @apply relative flex items-center justify-center mx-auto text-white
+  }
+  .top-nav p{
+    @apply relative flex items-center justify-center mx-auto text-white right-0
+  }
+  .top-nav-item{
+    @apply relative flex items-center justify-center mx-auto bg-gray-500 text-white hover:bg-cyan-300 transition-all duration-100 ease-linear cursor-pointer px-10;
+  }
+  main{
+    @apply bg-gray-600 w-screen h-screen p-14
   }
 }

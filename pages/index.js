@@ -8,14 +8,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Tornado - Network Tycoon managment panel</title>
+        <title>Tornado | Home</title>
         <meta name="description" content="Managment app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Image src='/Images/Screens/15072022.png' width={256} height={128}/>
     </div>
   )
 }
-
-export const config={
-  runtime: 'experimental-edge'
-};
