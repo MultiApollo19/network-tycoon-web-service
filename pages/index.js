@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import screen1 from "../public/Images/Screens/15072022.png"
+import screen1 from "./Images/Screens/15072022.png"
 
 
 export default function Home() {
