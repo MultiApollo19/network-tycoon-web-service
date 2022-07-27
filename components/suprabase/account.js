@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../../suprabase/clientApp'
+import Avatar from './avatar'
 
 export default function Account({ session }) {
   const [loading, setLoading] = useState(true)
@@ -67,7 +68,7 @@ export default function Account({ session }) {
 
   return (
     <div className="form-widget">
-      <div>
+      <div>      
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={session.user.email} disabled />
       </div>
