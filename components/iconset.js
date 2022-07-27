@@ -1,7 +1,7 @@
-const Logo = (width='32',height='32',fill='#ffffff') => (
+const Logo = (size=12,fill='#ffffff') => (
     <svg
-      width={32.635}
-      height={32.635}
+      width={32}
+      height={32}
       viewBox="0 0 184.318 207.584"
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
@@ -10,11 +10,13 @@ const Logo = (width='32',height='32',fill='#ffffff') => (
       <g
         style={{
           display: "inline",
+          fill: {fill},
         }}
       >
         <path
           style={{
             stroke: "#000",
+            fill: {fill},
             strokeWidth: ".264583px",
             strokeLinecap: "butt",
             strokeLinejoin: "miter",
