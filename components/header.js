@@ -6,7 +6,10 @@ import Image from "next/image";
 
 const Header=()=>{
     const { data: session, status } = useSession()
+    console.warn("DEBUG: auth")
     console.log(session,status);
+    console.warn("DEBUG: env")
+    console.log(process.env.GITHUB_ID);
     return(
         <div className="top-nav fixed flex h-12 flex-row bg-gray-700 w-screen dark:border-gray-900 dark:text-white z-0">
             <Search/>
