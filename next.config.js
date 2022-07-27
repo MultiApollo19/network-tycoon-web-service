@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
   env:{
     GITHUB_SECRET: process.env.GITHUB_SECRET,
     GITHUB_ID: process.env.GITHUB_ID,

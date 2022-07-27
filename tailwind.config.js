@@ -23,7 +23,11 @@ module.exports = {
           300: '#e3e5e8',
           200: '#ebedef',
           100: '#f2f3f5',
-        }
+        },
+        win_bg: "#008081",
+        win_tile_bg: "#c0c0c0",
+        win_tile_top: "#ffffff",
+        win_tile_bottom: "#707070",
       },
       fontFamily:{
         arcade:['Arcade',"normal"]
