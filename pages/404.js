@@ -15,7 +15,7 @@ const NotFound = () => {
 
 
   return (
-    <div className="not-found relative bg-blue-800 font-arcade font-normal w-screen h-screen flex flex-col items-center justify-center shadow-md z-50">
+    <div className="not-found bg-blue-800 font-arcade font-normal w-screen h-screen flex flex-col items-center justify-center shadow-md z-50">
       <h1>TORNADO 404</h1>
       <p>Ooops...looks like this page does not exist😢.</p>
       <p>Redirecting to homepage...</p>

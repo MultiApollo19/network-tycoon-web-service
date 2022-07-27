@@ -39,6 +39,6 @@
     @apply relative flex items-center justify-center mx-auto bg-gray-500 text-white hover:bg-cyan-300 transition-all duration-100 ease-linear cursor-pointer px-10;
   }
   main{
-    @apply bg-gray-600 w-screen h-screen p-14
+    @apply bg-gray-600 w-screen h-screen
   }
 }
