@@ -1,14 +1,10 @@
-generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
-}
-
 datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
-
+generator client {
+  provider = "prisma-client-js"
+}
 model AccessKey {
   KeyId        Int      @id @default(autoincrement())
   accessKey    String?  @unique
@@ -20,5 +16,5 @@ model User {
   nickName String? @unique
   email    String? @unique
   avatarUrl String? @unique
-  Key String? @unique
+  Key String? 
 }
