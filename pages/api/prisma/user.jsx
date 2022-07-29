@@ -24,4 +24,5 @@ async function handleGET(email,res){
         },
     })
     res.status(200).json(user)
+    res.end()
 }
