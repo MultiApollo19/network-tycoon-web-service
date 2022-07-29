@@ -9,34 +9,7 @@ import Image from "next/image";
 import {signIn,signOut, useSession} from "next-auth/react";
 import { useState,useEffect } from "react";
 
-
-
-const SideBarr=()=>{
-    
-
-    const [isLoading,setIsLoading] = useState(true)
-    const [userData,setUserData] = useState(null)
-
-    
-        useEffect(()=>{
-            async function fetchUserData(){
-                if(session && status=='authenticated'){
-                const response = await fetch (`http://localhost:3000/api/prisma/user?email=${session.user.email}`)
-                console.log(response)
-                const data = await response.json()
-                setUserData(data)
-            }
-            }
-            fetchUserData()
-            
-        },[])
-    
-    
-
-    
-
-    
-};
+import { BASE_URL } from "../lib/constraints";
 
 
 const SideBarIcon=({icon, text='tooltip 💡'})=>(
@@ -54,7 +27,7 @@ export default function SideBar(){
     const { data: session, status } = useSession()
 
     const fetchUserData = async () =>{
-        const response = await fetch(`http://localhost:3000/api/prisma/user?email=${session.user.email}`)
+        const response = await fetch(`${BASE_URL}/api/prisma/user?email=${session.user.email}`)
         const data = await response.json()
         setUserData(data)
     }
