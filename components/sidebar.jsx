@@ -28,6 +28,7 @@ export default function SideBar(){
 
     const fetchUserData = async () =>{
         const response = await fetch(`${BASE_URL}/api/prisma/user?email=${session.user.email}`)
+        console.log(`${BASE_URL}/api/prisma/user?email=${session.user.email}`)
         const data = await response.json()
         setUserData(data)
     }
