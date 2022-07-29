@@ -1,14 +1,7 @@
 import { BASE_URL } from "../lib/constraints";
 import Head from 'next/head'
 
-const debugLogs=()=>{
-    return(
-        console.log("NEXT_PUBLIC_GITHUB_ID", process.env.NEXT_PUBLIC_GITHUB_ID),
-        console.log("NEXT_PUBLIC_DATABASE_URL", process.env.NEXT_PUBLIC_DATABASE_URL),
-        console.log("NEXT_PUBLIC_API_URL", process.env.NEXT_PUBLIC_API_URL),
-        console.log("API_final", BASE_URL)
-    )
-}
+
 export default function Debug(){
     return(
         <>

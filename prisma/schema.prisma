@@ -38,6 +38,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  role Role @default(DEMO)
   hasAccess     Boolean @default(false)
   isFirstLogin  Boolean @default(true)
   accessToken   VerificationToken[]
@@ -53,4 +54,8 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+enum Role{
+  ADMIN
+  DEMO
 }
