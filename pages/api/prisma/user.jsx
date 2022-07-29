@@ -18,11 +18,13 @@ export default async function handle(req,res){
 }
 
 async function handleGET(email,res){
+    prisma.$connect()
     const user = await prisma.user.findUnique({
         where:{
             email: String(email)
         },
     })
+    prisma.$disconnect()
     res.status(200).json(user)
     res.end()
 }
