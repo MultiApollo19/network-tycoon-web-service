@@ -1,5 +1,6 @@
 import { BsBug } from "react-icons/bs";
 import { MdBuild,MdCached,MdLogin,MdLogout} from "react-icons/md";
+import {FaUsers} from 'react-icons/fa'
 import {VscSignIn} from "react-icons/vsc";
 import Logo from "./iconset";
 import Link from "next/link";
@@ -50,7 +51,9 @@ export default function SideBar(){
             )}
             {user&&(
                 <>
+                
                 <Link href="/profile"><a><SideBarIcon icon={<Image src={user.user_metadata.avatar} width='50' height='50' className='avatar'/>}  text={user.user_metadata.nickname}/></a></Link>
+                <Link href="/users"><a><SideBarIcon icon={<FaUsers size='24'/>}  text='User list'/></a></Link>
                 <Link href="/"><a onClick={e => {logOut()}}><SideBarIcon icon={<MdLogout size='24'/>}  text='Logout'/></a></Link>
                 </>
                 

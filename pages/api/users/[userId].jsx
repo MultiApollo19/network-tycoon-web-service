@@ -1,8 +1,11 @@
 import {supabase} from "@/lib/supabase"
 
-export default async function (req, res) {
+export default async function handler (req, res) {
+    const {userId} = req.query
+
   try {
-    const response = await supabase.from('users').select();
+    
+    const response = await supabase.from('users').select('*',{ count: 'exact' }).match({nickname: userId})
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Cache-Control', 'max-age=180000');

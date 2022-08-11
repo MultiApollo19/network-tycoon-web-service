@@ -122,7 +122,7 @@ export default function SignUpPage(){
                 </form></>
             ) }
             {keyMatch &&(
-                <><h1 className="flex text-3xl text-black underline pb-4">Login</h1>
+                <><h1 className="flex text-3xl text-black underline pb-4">Sign Up</h1>
                 <form onSubmit={handleSubmit}>
                 <div className="flex mx-auto ">
                     <label htmlFor="nickname">Nickname: </label><input className="text-xl text-black items-black w-max outline outline-2" type='text' id='nickname' name='nickname'></input></div>
