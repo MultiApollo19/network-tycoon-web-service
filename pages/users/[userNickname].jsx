@@ -28,7 +28,7 @@ export default function User({user}) {
 
 export async function getStaticProps(context){
     const {params}=context
-    const response = await fetch(`${BASE_URL}/api/users/${params.userNickname}`)
+    const response = await fetch(`https://tornadodev.vercel.app/api/users/${params.userNickname}`)
     
     const data = await response.json()
 
