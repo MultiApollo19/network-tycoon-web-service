@@ -1,7 +1,12 @@
 const Logo = (width='32',height='32',fill='#ffffff') => (
     <svg
+<<<<<<< Updated upstream:components/iconset.js
       width={32.635}
       height={32.635}
+=======
+      width={24}
+      height={24}
+>>>>>>> Stashed changes:components/iconset.jsx
       viewBox="0 0 184.318 207.584"
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
