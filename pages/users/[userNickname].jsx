@@ -29,7 +29,12 @@ export default function User({user}) {
 
 export async function getStaticProps(context){
     const {params}=context
-    const response = await supabase.from('users').select('*',{ count: 'exact' }).match({nickname: params.userNickname})
+
+    let response = null;
+    try{
+        response = await supabase.from('users').select('*',{ count: 'exact' }).match({nickname: params.userNickname})
+    }catch(err){};
+     
     
 
     return{
