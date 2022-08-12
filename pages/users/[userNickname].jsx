@@ -5,10 +5,16 @@ import { BASE_URL } from '@/lib/constraints'
 import {supabase} from "@/lib/supabase"
 
 export default function User({user}) {
-
-    const router = useRouter()
-    if(router.isFallback){
-        return <div className="login-window">Loading...</div>
+    if(!user){
+        <div className="login-window">
+              <Head>
+                <title>Tornado | User</title>
+                <meta name="description" content="Managment app" />
+                <link rel="icon" href="/favicon.ico" />
+              </Head>
+              <div>Loading...</div>
+               
+            </div>
     }
     if(user){
         return (
@@ -27,7 +33,7 @@ export default function User({user}) {
   
 }
 
-export async function getServerSideProps(context){
+export async function getStaticProps(context){
     const {params}=context
 
     let response = null;
@@ -40,6 +46,24 @@ export async function getServerSideProps(context){
     return{
         props:{
             user: response.body,
-        }
+        },
+        revalidate: 86400,
     }
+}
+
+export async function getStaticPaths(){
+    const response = await supabase.from('users').select();
+    const body = response.body;
+
+    const paths = body.map(user=>{
+        return{
+            params: {userNickname: user.nickname},
+            
+        }
+    })
+    return{
+        paths,
+        fallback: true,
+    }
+    
 }

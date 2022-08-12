@@ -1,10 +1,18 @@
-const handler = async (req, res) => {
-    await res.revalidate("/users");
+import { supabase } from "@/lib/supabase";
 
-    const pathToRevalidate = `/${
-        req.body?.record?.id || req.body?.old_record?.id
-      }`;
-      await res.revalidate(pathToRevalidate);
+const handler = async (req, res) => {
+
+    await res.revalidate("/users");
+    const response = await supabase.from('users').select();
+    const body = response.body;
+
+    for (let i = 0; i < body.length; i++) {
+      await res.revalidate(`/users/${body[i].nickname}`);
+      
+    }
+    
+    
+
 
     return res.send({ revalidated: true });
   };

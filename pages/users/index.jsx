@@ -3,8 +3,14 @@ import Image from 'next/image'
 import { BASE_URL } from '@/lib/constraints'
 import Link from "next/link";
 import {supabase} from "@/lib/supabase"
+import useSWR from 'swr';
 
 export default function Users({users}) {
+
+
+
+
+  
   return (
     <div className="login-window">
       <Head>
@@ -34,7 +40,7 @@ export default function Users({users}) {
   )
 }
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
     const response = await supabase.from('users').select();
 
     
@@ -42,5 +48,6 @@ export async function getServerSideProps(){
         props:{
             users: response.body,
         },
+        revalidate: 86400,
     }
 }
