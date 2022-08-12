@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { BASE_URL } from '@/lib/constraints'
 import Link from "next/link";
+import {supabase} from "@/lib/supabase"
 
 export default function Users({users}) {
   return (
@@ -34,14 +35,13 @@ export default function Users({users}) {
 }
 
 export async function getStaticProps(){
-    const response = await fetch(`https://tornadodev.vercel.app/api/users`)
+    const response = await supabase.from('users').select();
+
     
-    const data = await response.json()
-
-
     return{
         props:{
-            users: data,
-        }
+            users: response.body,
+        },
+        revalidate: 60,
     }
 }

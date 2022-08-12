@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { BASE_URL } from '@/lib/constraints'
+import {supabase} from "@/lib/supabase"
 
 export default function User({user}) {
 
@@ -28,13 +29,12 @@ export default function User({user}) {
 
 export async function getStaticProps(context){
     const {params}=context
-    const response = await fetch(`https://tornadodev.vercel.app/api/users/${params.userNickname}`)
+    const response = await supabase.from('users').select('*',{ count: 'exact' }).match({nickname: params.userNickname})
     
-    const data = await response.json()
 
     return{
         props:{
-            user: data,
+            user: response.body,
         }
     }
 }
