@@ -34,7 +34,7 @@ export default function Users({users}) {
   )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
     const response = await supabase.from('users').select();
 
     
@@ -42,6 +42,5 @@ export async function getStaticProps(){
         props:{
             users: response.body,
         },
-        revalidate: 86400,
     }
 }

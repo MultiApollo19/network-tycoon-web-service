@@ -27,7 +27,7 @@ export default function User({user}) {
   
 }
 
-export async function getStaticProps(context){
+export async function getServerSideProps(context){
     const {params}=context
 
     let response = null;
@@ -41,12 +41,5 @@ export async function getStaticProps(context){
         props:{
             user: response.body,
         }
-    }
-}
-
-export async function getStaticPaths(){
-    return{
-        paths:[{params:{userNickname: 'MultiApollo19'}}],
-        fallback: true
     }
 }
