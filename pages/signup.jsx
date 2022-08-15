@@ -59,8 +59,8 @@ export default function SignUpPage(){
             alert("Password cannot be empty")
         }
         else{
-            if(password.length <= 6){
-                alert("Password must be greather than 6 letters")
+            if(password.length < 8){
+                alert("Password must be greather than 8 letters")
             }
         }
         if(nickname&&email && password.length >=6){
@@ -109,9 +109,8 @@ export default function SignUpPage(){
         
         <div className="login-window">
             <Head>
+                
             <title>Tornado | Signup</title>
-            <meta name="description" content="Managment app" />
-            <link rel="icon" href="/favicon.ico" />
             </Head>
             {!keyMatch &&(
                 <><h1 className="flex text-3xl text-black underline pb-4">Access key</h1>

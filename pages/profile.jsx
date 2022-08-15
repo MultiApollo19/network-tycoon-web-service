@@ -76,8 +76,6 @@ export default function Profile(){
             <div className="profile-window">
                 <Head>
                 <title>Tornado | Profile</title>
-                <meta name="description" content="Managment app" />
-                <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <h1 className="flex text-3xl text-black underline pb-4">Profile settings</h1>
                     <Image src={user.user_metadata.avatar} width='72' height='72' className='rounded-xl'/>

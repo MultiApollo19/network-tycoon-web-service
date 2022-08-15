@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
+      
         <title>Tornado | Home</title>
-        <meta name="description" content="Managment app" />
-        <link rel="icon" href="/favicon.ico" />
+
       </Head>
     </div>
   )

@@ -15,8 +15,6 @@ export default function Users({users}) {
     <div className="login-window">
       <Head>
         <title>Tornado | Users</title>
-        <meta name="description" content="Managment app" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>List of users</h1>
       <div className="flex-row">

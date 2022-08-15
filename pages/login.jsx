@@ -54,8 +54,6 @@ export default function LoginPage(){
         <div className="login-window">
             <Head>
             <title>Tornado | Login</title>
-            <meta name="description" content="Managment app" />
-            <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1 className="flex text-3xl text-black underline pb-4">Login</h1>
             <form onSubmit={handleSubmit}>

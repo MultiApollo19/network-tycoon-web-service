@@ -9,8 +9,6 @@ export default function User({user}) {
         <div className="login-window">
               <Head>
                 <title>Tornado | User</title>
-                <meta name="description" content="Managment app" />
-                <link rel="icon" href="/favicon.ico" />
               </Head>
               <div>Loading...</div>
                

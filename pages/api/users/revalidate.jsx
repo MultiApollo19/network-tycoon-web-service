@@ -5,16 +5,19 @@ const handler = async (req, res) => {
     await res.revalidate("/users");
     const response = await supabase.from('users').select();
     const body = response.body;
-
-    for (let i = 0; i < body.length; i++) {
-      await res.revalidate(`/users/${body[i].nickname}`);
-      
+    if(body){
+      for (let i = 0; i < body.length; i++) {
+        await res.revalidate(`/users/${body[i].nickname}`);
+        
+      }
     }
+
+    
     
     
 
 
-    return res.send({ revalidated: true });
+    res.status(200).json({ revalidated: true });
   };
   
   export default handler;
