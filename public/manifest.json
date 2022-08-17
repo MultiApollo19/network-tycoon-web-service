@@ -1,0 +1,32 @@
+{
+    "name": "Tornado",
+    "short_name": "torando",
+    "theme_color": "#202225",
+    "background_color": "#008081",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "description": "Application managment",
+    "icons": [
+      {
+        "src": "app/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "app/icon-384x384.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "app/icon-256x256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "app/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ]
+  }
