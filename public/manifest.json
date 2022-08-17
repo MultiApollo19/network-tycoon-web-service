@@ -3,7 +3,7 @@
     "short_name": "torando",
     "theme_color": "#202225",
     "background_color": "#008081",
-    "display": "minimal-ui",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "description": "Application managment",
