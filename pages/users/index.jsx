@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { BASE_URL } from '@/lib/constraints'
 import Link from "next/link";
 import {supabase} from "@/lib/supabase"
-import useSWR from 'swr';
 
 export default function Users({users}) {
 
