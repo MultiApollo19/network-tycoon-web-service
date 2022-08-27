@@ -32,3 +32,9 @@ key
 
 # vercel
 .vercel
+
+#pwa
+
+public/sw.js
+public/workbox-*.js
+public/fallback-*.js

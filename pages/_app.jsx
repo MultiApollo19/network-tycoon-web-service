@@ -9,16 +9,7 @@ import Link from 'next/link';
 import Head from "next/head";
 
 export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('/sw.js')
-      .then((reg)=> console.log(reg))
-      .catch((err) => console.log(err))
-    }
-  },[])
-  
-
-  return (
+    return (
     <>
     
     <Head>
