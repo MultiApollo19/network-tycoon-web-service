@@ -7,11 +7,12 @@ import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { useEffect } from "react"
 import Link from 'next/link';
 import Head from "next/head";
+import {IKContext} from 'imagekitio-react'
+
 
 export default function MyApp({ Component, pageProps }) {
     return (
     <>
-    
     <Head>
       <link rel="manifest" href="/manifest.json" />
       <meta name="description" content="Managment app" />
@@ -27,9 +28,13 @@ export default function MyApp({ Component, pageProps }) {
       <meta name="theme-color" content="#202225"/>
     </Head>
     <UserProvider supabaseClient={supabaseClient}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <IKContext publicKey="public_yvDkUIXvrY3LUk8UUZBFBKMDUOU=" urlEndpoint="https://ik.imagekit.io/fhld2hvfx" transformationPosition="path" authenticationEndpoint="https://tornadomanager.vercel.app/auth"
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      
+      </IKContext>
     </UserProvider>
     </>
     

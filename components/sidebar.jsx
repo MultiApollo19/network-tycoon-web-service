@@ -8,6 +8,7 @@ import Router, { useRouter } from 'next/router'
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from 'react'
+import { IKImage, IKVideo, IKContext, IKUpload } from 'imagekitio-react'
 
 
 
@@ -55,6 +56,10 @@ export default function SideBar(){
                 <Link href="/profile"><a><SideBarIcon icon={<Image src={user.user_metadata.avatar} width='50' height='50' className='avatar'/>}  text={user.user_metadata.nickname}/></a></Link>
                 <Link href="/users"><a><SideBarIcon icon={<FaUsers size='24'/>}  text='User list'/></a></Link>
                 <Link href="/"><a onClick={e => {logOut()}}><SideBarIcon icon={<MdLogout size='24'/>}  text='Logout'/></a></Link>
+                <IKImage path="/default-image.jpg" transformation={[{
+                    "height":"300",
+                    "width":"400"
+                }]}/>
                 </>
                 
             )}            

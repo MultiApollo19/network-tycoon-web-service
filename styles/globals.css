@@ -66,4 +66,7 @@
   .profile-window{
     @apply flex relative flex-col p-6 items-center justify-center text-white text-xl mt-36 font-arcade mx-auto bg-win_tile_bg border-4 border-t-win_tile_top border-l-win_tile_top border-r-win_tile_bottom border-b-win_tile_bottom max-w-3xl max-h-96
   }
+  .update-window{
+    @apply flex relative flex-col p-6 text-white text-xl mt-2 mb-14 font-arcade mx-auto bg-win_tile_bg border-4 border-t-win_tile_top border-l-win_tile_top border-r-win_tile_bottom border-b-win_tile_bottom max-w-6xl max-h-fit w-1/3
+  }
 }
